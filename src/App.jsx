@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
+// import Experience from './components/Experience';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Stats from './components/Stats';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -35,9 +36,10 @@ const App = () => {
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main>
         <Hero darkMode={darkMode} />
-        <Experience />
+        {/* <Experience /> */}
         <Education />
         <Projects />
+        <Stats />
         <Skills />
         <Contact />
       </main>
