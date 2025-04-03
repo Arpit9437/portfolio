@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Stats from './components/Stats';
+// import About from './components/About';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -37,6 +38,7 @@ const App = () => {
       <main>
         <Hero darkMode={darkMode} />
         {/* <Experience /> */}
+        {/* <About /> */}
         <Education />
         <Projects />
         <Stats />

@@ -1,7 +1,5 @@
-'use client'
-
 import React, { useEffect, useState, useCallback } from 'react';
-import { Github, Linkedin, Mail, Download, Moon, Sun } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Moon, Sun, Terminal, ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
@@ -36,6 +34,15 @@ const Hero = () => {
     }
   };
 
+  const scrollToNext = () => {
+    // Calculate height of viewport to scroll exactly one page down
+    const viewportHeight = window.innerHeight;
+    window.scrollTo({
+      top: viewportHeight,
+      behavior: 'smooth'
+    });
+  };
+
   const tick = useCallback(() => {
     const i = loopNum % words.length;
     const fullText = words[i];
@@ -62,7 +69,7 @@ const Hero = () => {
   }, [typedText, isDeleting, typingSpeed, tick]);
 
   return (
-    <section className="min-h-screen flex flex-col justify-between bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    <section className="min-h-screen flex flex-col justify-between bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 relative">
       <div className="absolute top-4 right-4">
         <button
           onClick={toggleTheme}
@@ -97,29 +104,43 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="pb-8">
+      <div className="pb-15">
         <div className="flex justify-center space-x-6 mb-4">
           <a 
-            href="https://github.com" 
+            href="https://github.com/Arpit9437" 
             className="transform hover:scale-110 transition-transform duration-300 text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary-light"
             aria-label="GitHub Profile"
           >
             <Github size={28} />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/arpit-kaple-740995260/" 
             className="transform hover:scale-110 transition-transform duration-300 text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary-light"
             aria-label="LinkedIn Profile"
           >
             <Linkedin size={28} />
           </a>
           <a 
-            href="mailto:example@email.com" 
+            href="mailto:arpitkaple13@gmail.com" 
             className="transform hover:scale-110 transition-transform duration-300 text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary-light"
             aria-label="Email Contact"
           >
             <Mail size={28} />
           </a>
+        </div>
+        
+        {/* Scroll Down Button */}
+        <div className="mt-8 mb-4 flex justify-center">
+          <button 
+            onClick={scrollToNext}
+            className="flex flex-col items-center justify-center text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary-light transition-colors duration-300 focus:outline-none"
+            aria-label="Scroll down"
+          >
+            <span className="text-sm font-medium mb-2">Scroll Down</span>
+            <div className="animate-bounce">
+              <ChevronDown size={28} className="animate-pulse" />
+            </div>
+          </button>
         </div>
       </div>
     </section>

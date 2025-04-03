@@ -60,6 +60,10 @@ const Education = () => {
                       <p className="text-gray-600 dark:text-gray-300 mr-20">
                         {edu.degree}
                       </p>
+                      {/* Add percentage info */}
+                      <p className="text-primary dark:text-primary-light text-sm font-medium mr-20 mt-1">
+                        {`${edu.description}`}
+                      </p>
                     </>
                   ) : (
                     <div className="text-secondary dark:text-secondary-light -mt-5">
@@ -98,6 +102,10 @@ const Education = () => {
                       </div>
                       <p className="text-gray-600 dark:text-gray-300 ml-20">
                         {edu.degree}
+                      </p>
+                      {/* Add percentage info */}
+                      <p className="text-primary dark:text-primary-light text-sm font-medium ml-20 mt-1">
+                        {`${edu.description}`}
                       </p>
                     </>
                   )}

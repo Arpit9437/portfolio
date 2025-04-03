@@ -112,22 +112,22 @@ const Stats = () => {
   const codingProfiles = [
     {
       name: "GeeksForGeeks",
-      icon: <Github size={20} />,
+      icon: "",
       url: "https://www.geeksforgeeks.org/user/arpitkaple13 ",
       color:
         "bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600",
     },
     {
       name: "LeetCode",
-      icon: <Code size={20} />,
+      icon: "",
       url: "https://leetcode.com/Arknight9437",
       color:
         "bg-yellow-600 hover:bg-yellow-700 dark:bg-yellow-700 dark:hover:bg-yellow-600",
     },
     {
       name: "Code360",
-      icon: <Codepen size={20} />,
-      url: "https://codepen.io/Arknight9437",
+      icon: "",
+      url: "https://www.naukri.com/code360/profile/0de48a93-6c3b-4645-9e7b-1894b484205a",
       color:
         "bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-600",
     },
@@ -148,11 +148,20 @@ const Stats = () => {
           <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-secondary to-primary dark:from-secondary-light dark:to-primary-light bg-clip-text text-transparent">
             LeetCode Stats
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto mt-4">
-            Here are some notable projects and works that highlight my skills,
-            expertise, and contributions in the field of computer science and
-            software development.
+          <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto mt-2">
+            To get complete coding summary{" "}
+            <a 
+              href="https://codolio.com/profile/arpitkaple" 
+              className="text-accent dark:text-accent-light font-medium hover:underline"
+            >
+              click here
+            </a>.
           </p>
+          <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto mt-4">
+          This section summarizes my coding journey, highlighting my growth and passion for continuous learning and problem-solving.
+          </p>
+          {/* Added link for complete coding summary */}
+          
         </div>
 
         {/* Circular stats in a single line */}

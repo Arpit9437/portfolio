@@ -5,7 +5,7 @@ import ThemeToggle from '../ThemeToggle';
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = ['About', 'Experience', 'Education', 'Projects', 'Skills', 'Contact'];
+  const navItems = [ 'Education', 'Projects', 'Stats', 'Skills', 'Contact'];
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-700 transition-colors duration-200">

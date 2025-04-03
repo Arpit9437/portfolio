@@ -34,7 +34,7 @@ export const projects = [
       school: "Ramdeobaba University, Nagpur",
       year: "2022-2026",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-oEmXLUpEOHuUlF2RPNjWKyKyyGpZrugtHw&s",
-      description: "8.93"
+      description: "CGPA : 8.93 / 10"
     },
     {
       degree: "Higher Secondary Education",
@@ -84,3 +84,25 @@ export const projects = [
       ]
     }
   ];
+
+  export const about = {
+    profileImage: "/images/profile.jpg", // Update with your actual image path
+    greeting: "Hi, I'm Arpit Kaple",
+    description: [
+      "I'm a passionate Full Stack Developer and Machine Learning enthusiast with a strong foundation in web development and data science.",
+      "With expertise in both frontend and backend technologies, I enjoy building user-friendly applications that solve real-world problems.",
+      "My journey in technology began during my undergraduate studies, and I've since developed a keen interest in exploring innovative solutions at the intersection of web development and artificial intelligence."
+    ],
+    skills: [
+      "JavaScript", 
+      "React.js", 
+      "Node.js", 
+      "Python", 
+      "Machine Learning", 
+      "TensorFlow", 
+      "MongoDB", 
+      "SQL", 
+      "Git", 
+      "Tailwind CSS"
+    ]
+  };

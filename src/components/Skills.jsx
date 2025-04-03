@@ -143,9 +143,7 @@ const Skills = () => {
             Skills
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto mt-4">
-            Here are some notable projects and works that highlight my skills,
-            expertise, and contributions in the field of computer science and
-            software development.
+            Following are some of my skills and expertise.
           </p>
           <div className="flex justify-center space-x-2 mt-4">
             {Array.from({ length: totalPages }).map((_, index) => (
