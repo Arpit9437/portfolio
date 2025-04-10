@@ -21,7 +21,8 @@ const Education = () => {
           </p>
         </div>
 
-        <div className="relative">
+        {/* Desktop Timeline (hidden on mobile) */}
+        <div className="relative hidden md:block">
           {/* Vertical Timeline Line */}
           <div className="absolute left-1/2 h-full w-px bg-gray-300 dark:bg-gray-700 transform -translate-x-1/2" />
 
@@ -48,21 +49,18 @@ const Education = () => {
                           {edu.school}
                         </h3>
                         <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20">
-                          <span className="text-2xl font-bold text-gray-500 dark:text-gray-400">
-                            <img
-                              src={edu.logo}
-                              className="w-14 h-14 rounded-full object-cover"
-                              alt={edu.school}
-                            />
-                          </span>
+                          <img
+                            src={edu.logo}
+                            className="w-14 h-14 rounded-full object-cover"
+                            alt={edu.school}
+                          />
                         </div>
                       </div>
                       <p className="text-gray-600 dark:text-gray-300 mr-20">
                         {edu.degree}
                       </p>
-                      {/* Add percentage info */}
                       <p className="text-primary dark:text-primary-light text-sm font-medium mr-20 mt-1">
-                        {`${edu.description}`}
+                        {edu.description}
                       </p>
                     </>
                   ) : (
@@ -88,13 +86,11 @@ const Education = () => {
                     <>
                       <div className="flex items-center -mb-1">
                         <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20">
-                          <span className="text-2xl font-bold text-gray-500 dark:text-gray-400">
-                            <img
-                              src={edu.logo}
-                              className="w-14 h-14 rounded-full object-cover"
-                              alt={edu.school}
-                            />
-                          </span>
+                          <img
+                            src={edu.logo}
+                            className="w-14 h-14 rounded-full object-cover"
+                            alt={edu.school}
+                          />
                         </div>
                         <h3 className="text-xl font-bold text-secondary dark:text-secondary-light ml-3">
                           {edu.school}
@@ -103,12 +99,52 @@ const Education = () => {
                       <p className="text-gray-600 dark:text-gray-300 ml-20">
                         {edu.degree}
                       </p>
-                      {/* Add percentage info */}
                       <p className="text-primary dark:text-primary-light text-sm font-medium ml-20 mt-1">
-                        {`${edu.description}`}
+                        {edu.description}
                       </p>
                     </>
                   )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Timeline (visible only on mobile) */}
+        <div className="relative md:hidden">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-6 h-full w-px bg-gray-300 dark:bg-gray-700" />
+
+          {education.map((edu, index) => (
+            <div key={index} className="relative mb-12 last:mb-0 pl-16">
+              {/* Timeline Node */}
+              <div className="absolute left-6 top-6 transform -translate-x-1/2 z-10">
+                <div className="w-3 h-3 bg-accent dark:bg-accent-light rounded-full" />
+              </div>
+
+              <div className="flex flex-col">
+                <div className="flex items-center mb-2">
+                  <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20 mr-3">
+                    <img
+                      src={edu.logo}
+                      className="w-10 h-10 rounded-full object-cover"
+                      alt={edu.school}
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-secondary dark:text-secondary-light">
+                    {edu.school}
+                  </h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-1">
+                  {edu.degree}
+                </p>
+                <div className="flex items-center justify-between">
+                  <p className="text-primary dark:text-primary-light text-sm font-medium">
+                    {edu.description}
+                  </p>
+                  <p className="text-secondary dark:text-secondary-light text-sm">
+                    {edu.year}
+                  </p>
                 </div>
               </div>
             </div>

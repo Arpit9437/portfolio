@@ -2,6 +2,11 @@ import { Github, ExternalLink, Code } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 
 const Projects = () => {
+  // Function to check if a URL is valid and not just "#"
+  const isValidUrl = (url) => {
+    return url && url !== "#";
+  };
+
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-background-dark transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4">
@@ -28,14 +33,24 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex space-x-4">
-                  <a href={project.github} 
-                    className="text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary-light flex items-center transition-colors duration-300">
-                    <Github size={20} className="mr-1" /> Code
-                  </a>
-                  <a href={project.live} 
-                    className="text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary-light flex items-center transition-colors duration-300">
-                    <ExternalLink size={20} className="mr-1" /> Live
-                  </a>
+                  {isValidUrl(project.github) && (
+                    <a 
+                      href={project.github}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary-light flex items-center transition-colors duration-300">
+                      <Github size={20} className="mr-1" /> Code
+                    </a>
+                  )}
+                  {isValidUrl(project.live) && (
+                    <a 
+                      href={project.live}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary-light flex items-center transition-colors duration-300">
+                      <ExternalLink size={20} className="mr-1" /> Live
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

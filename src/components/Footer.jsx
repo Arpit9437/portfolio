@@ -6,12 +6,6 @@ const Footer = () => {
           {/* Updated footer with more content */}
           <div className="flex space-x-6">
             <a 
-              href="#about" 
-              className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors duration-300"
-            >
-              About
-            </a>
-            <a 
               href="#education" 
               className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors duration-300"
             >
@@ -22,6 +16,12 @@ const Footer = () => {
               className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors duration-300"
             >
               Projects
+            </a>
+            <a 
+              href="#stats" 
+              className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors duration-300"
+            >
+              Stats
             </a>
             <a 
               href="#skills" 

@@ -8,7 +8,7 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const words = ['Full Stack Developer', 'Machine Learning Enthusiast'];
+  const words = ['Computer Science Undergrad', 'Full Stack Engineer', 'Machine Learning Enthusiast'];
   const deletingSpeed = 50;
   const delayBetweenWords = 2000;
 
