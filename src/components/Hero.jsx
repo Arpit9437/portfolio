@@ -96,7 +96,7 @@ const Hero = () => {
 
           <button
             className="px-6 py-2 bg-primary text-white rounded-full font-medium flex items-center gap-2 hover:bg-primary-dark transition-colors duration-300 mx-auto"
-            onClick={() => window.open('https://drive.google.com/file/d/1TbS8dKSMuucNI_cBXOxgF6e-brZiHksk/view?usp=sharing', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/1IWZHXdYQTcAI6JOlOFto-RtaxU4Qf9gB/view?usp=sharing', '_blank')}
           >
             <Download size={20} />
             Download CV
