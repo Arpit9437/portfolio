@@ -21,19 +21,19 @@ const Education = () => {
           </p>
         </div>
 
-        {/* Desktop Timeline (hidden on mobile) */}
+        {/* Desktop Timeline (hidden on mobile) - IMPROVED */}
         <div className="relative hidden md:block">
           {/* Vertical Timeline Line */}
           <div className="absolute left-1/2 h-full w-px bg-gray-300 dark:bg-gray-700 transform -translate-x-1/2" />
 
           {education.map((edu, index) => (
-            <div key={index} className="relative mb-24 last:mb-0">
-              {/* Timeline Node */}
+            <div key={index} className="relative mb-28 last:mb-0">
+              {/* Timeline Node - Increased size */}
               <div className="absolute left-1/2 top-8 transform -translate-x-1/2 z-10">
-                <div className="w-3 h-3 bg-accent dark:bg-accent-light rounded-full" />
+                <div className="w-4 h-4 bg-accent dark:bg-accent-light rounded-full" />
               </div>
 
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 gap-10">
                 {/* Left Side */}
                 <div
                   className={
@@ -45,26 +45,27 @@ const Education = () => {
                   {index % 2 === 0 ? (
                     <>
                       <div className="flex items-center justify-end -mb-1">
-                        <h3 className="text-xl font-bold text-secondary dark:text-secondary-light mr-4">
+                        <h3 className="text-xl font-bold text-secondary dark:text-secondary-light mr-5 leading-tight">
                           {edu.school}
                         </h3>
-                        <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20">
+                        {/* Improved icon container */}
+                        <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20">
                           <img
                             src={edu.logo}
-                            className="w-14 h-14 rounded-full object-cover"
+                            className="w-16 h-16 rounded-full object-cover"
                             alt={edu.school}
                           />
                         </div>
                       </div>
-                      <p className="text-gray-600 dark:text-gray-300 mr-20">
+                      <p className="text-gray-600 dark:text-gray-300 mr-24 mt-3">
                         {edu.degree}
                       </p>
-                      <p className="text-primary dark:text-primary-light text-sm font-medium mr-20 mt-1">
+                      <p className="text-primary dark:text-primary-light text-sm font-medium mr-24 mt-2">
                         {edu.description}
                       </p>
                     </>
                   ) : (
-                    <div className="text-secondary dark:text-secondary-light -mt-5">
+                    <div className="text-secondary dark:text-secondary-light text-lg font-medium">
                       {edu.year}
                     </div>
                   )}
@@ -79,27 +80,28 @@ const Education = () => {
                   }
                 >
                   {index % 2 === 0 ? (
-                    <div className="text-secondary dark:text-secondary-light -mt-5">
+                    <div className="text-secondary dark:text-secondary-light text-lg font-medium">
                       {edu.year}
                     </div>
                   ) : (
                     <>
                       <div className="flex items-center -mb-1">
-                        <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20">
+                        {/* Improved icon container */}
+                        <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20">
                           <img
                             src={edu.logo}
-                            className="w-14 h-14 rounded-full object-cover"
+                            className="w-16 h-16 rounded-full object-cover"
                             alt={edu.school}
                           />
                         </div>
-                        <h3 className="text-xl font-bold text-secondary dark:text-secondary-light ml-3">
+                        <h3 className="text-xl font-bold text-secondary dark:text-secondary-light ml-5 leading-tight">
                           {edu.school}
                         </h3>
                       </div>
-                      <p className="text-gray-600 dark:text-gray-300 ml-20">
+                      <p className="text-gray-600 dark:text-gray-300 ml-24 mt-3">
                         {edu.degree}
                       </p>
-                      <p className="text-primary dark:text-primary-light text-sm font-medium ml-20 mt-1">
+                      <p className="text-primary dark:text-primary-light text-sm font-medium ml-24 mt-2">
                         {edu.description}
                       </p>
                     </>
@@ -113,38 +115,46 @@ const Education = () => {
         {/* Mobile Timeline (visible only on mobile) */}
         <div className="relative md:hidden">
           {/* Vertical Timeline Line */}
-          <div className="absolute left-6 h-full w-px bg-gray-300 dark:bg-gray-700" />
+          <div className="absolute left-8 h-full w-px bg-gray-300 dark:bg-gray-700" />
 
           {education.map((edu, index) => (
-            <div key={index} className="relative mb-12 last:mb-0 pl-16">
+            <div key={index} className="relative mb-16 last:mb-0 pl-20">
               {/* Timeline Node */}
-              <div className="absolute left-6 top-6 transform -translate-x-1/2 z-10">
-                <div className="w-3 h-3 bg-accent dark:bg-accent-light rounded-full" />
+              <div className="absolute left-8 top-8 transform -translate-x-1/2 z-10">
+                <div className="w-4 h-4 bg-accent dark:bg-accent-light rounded-full" />
               </div>
 
               <div className="flex flex-col">
-                <div className="flex items-center mb-2">
-                  <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20 mr-3">
+                <div className="flex items-start mb-4">
+                  {/* Icon container */}
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center border border-primary/20 dark:border-primary-light/20 mr-4">
                     <img
                       src={edu.logo}
-                      className="w-10 h-10 rounded-full object-cover"
+                      className="w-12 h-12 rounded-full object-cover"
                       alt={edu.school}
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-secondary dark:text-secondary-light">
-                    {edu.school}
-                  </h3>
+                  {/* School name */}
+                  <div className="pt-1">
+                    <h3 className="text-lg font-bold text-secondary dark:text-secondary-light leading-tight">
+                      {edu.school}
+                    </h3>
+                  </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-1">
-                  {edu.degree}
-                </p>
-                <div className="flex items-center justify-between">
-                  <p className="text-primary dark:text-primary-light text-sm font-medium">
-                    {edu.description}
+                
+                {/* Content with better spacing */}
+                <div className="ml-20">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                    {edu.degree}
                   </p>
-                  <p className="text-secondary dark:text-secondary-light text-sm">
-                    {edu.year}
-                  </p>
+                  <div className="flex flex-col space-y-2">
+                    <p className="text-primary dark:text-primary-light text-sm font-medium">
+                      {edu.description}
+                    </p>
+                    <p className="text-secondary dark:text-secondary-light text-sm font-medium">
+                      {edu.year}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
