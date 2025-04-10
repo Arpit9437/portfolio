@@ -5,7 +5,7 @@ import ThemeToggle from '../ThemeToggle';
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [ 'Education', 'Projects', 'Stats', 'Skills', 'Contact'];
+  const navItems = ['Education', 'Projects', 'Stats', 'Skills', 'Contact'];
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -25,13 +25,16 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             AK.
           </h1>
           
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-text-light dark:text-text-dark"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: Theme Toggle + Menu Button side by side */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <button 
+              className="text-text-light dark:text-text-dark"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
@@ -62,11 +65,6 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                 {item}
               </a>
             ))}
-            {/* Adding theme toggle to the mobile menu too for consistency */}
-            <div className="flex items-center">
-              <span className="text-gray-600 dark:text-gray-300 mr-2">Theme</span>
-              <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-            </div>
           </div>
         </div>
       </div>
