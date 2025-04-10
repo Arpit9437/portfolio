@@ -15,7 +15,7 @@ const Contact = () => {
           </p>
           <div className="flex justify-center">
             <a
-              href="mailto:example@email.com"
+              href="mailto:arpitkaple13@email.com"
               className="bg-primary dark:bg-primary-light text-white px-8 py-3 rounded-lg hover:bg-primary-dark dark:hover:bg-primary transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
             >
               Say Hello
