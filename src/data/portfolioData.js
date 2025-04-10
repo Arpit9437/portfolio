@@ -81,21 +81,21 @@ export const skills = [
 export const education = [
   {
     degree: "BTech. in Computer Science & Engineering",
-    school: "Ramdeobaba University, Nagpur",
+    school: "Shri Ramdeobaba College Of Engineering and Management",
     year: "2022-2026",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-oEmXLUpEOHuUlF2RPNjWKyKyyGpZrugtHw&s",
     description: "CGPA : 8.93 / 10",
   },
   {
     degree: "Higher Secondary Education",
-    school: "Shri Shivaji Science College, Nagpur",
+    school: "Shri Shivaji Science College",
     year: "2020-2022",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj9uLlH4oHZQV9v4ZGVszP8AKHB8NqFygXeA&s",
     description: "89%",
   },
   {
     degree: "Secondary Education",
-    school: "Bhavan's B.P. Vidya Mandir, Nagpur",
+    school: "Bhavan's B.P. Vidya Mandir",
     year: "2020",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxvalC7oZtBpT7k2ZhKR8n_ThSW0jG9sfHWg&s",
     description: "96.2%",
