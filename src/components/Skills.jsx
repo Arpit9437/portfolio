@@ -67,31 +67,33 @@ const Skills = () => {
             Following are some of my skills and expertise.
           </p>
           
-          {/* Category Selection Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mt-8">
-            <button
-              onClick={() => setCurrentCategory("all")}
-              className={`px-4 py-2 rounded-full transition-all duration-300 ${
-                currentCategory === "all"
-                  ? "bg-primary text-white dark:bg-primary-light dark:text-gray-900"
-                  : "bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
-              }`}
-            >
-              All
-            </button>
-            {Object.keys(skillCategories).map((category) => (
+          {/* Category Selection Tabs - Improved Responsive Design */}
+          <div className="w-full max-w-4xl mt-8 px-2">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               <button
-                key={category}
-                onClick={() => setCurrentCategory(category)}
-                className={`px-4 py-2 rounded-full transition-all duration-300 ${
-                  currentCategory === category
+                onClick={() => setCurrentCategory("all")}
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full transition-all duration-300 mb-2 ${
+                  currentCategory === "all"
                     ? "bg-primary text-white dark:bg-primary-light dark:text-gray-900"
                     : "bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
                 }`}
               >
-                {category}
+                All
               </button>
-            ))}
+              {Object.keys(skillCategories).map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setCurrentCategory(category)}
+                  className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full transition-all duration-300 mb-2 ${
+                    currentCategory === category
+                      ? "bg-primary text-white dark:bg-primary-light dark:text-gray-900"
+                      : "bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
