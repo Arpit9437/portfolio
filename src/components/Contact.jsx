@@ -10,8 +10,7 @@ const Contact = () => {
         </h2>
         <div className="max-w-xl mx-auto bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8 border border-gray-100 dark:border-gray-800">
           <p className="text-gray-600 dark:text-gray-300 text-center mb-8">
-            I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my
-            best to get back to you!
+          Currently open to new opportunities. Feel free to reach out with any questions or if you'd like to connect!
           </p>
           <div className="flex justify-center">
             <a
