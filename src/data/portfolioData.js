@@ -156,3 +156,36 @@ export const about = {
     "Tailwind CSS",
   ],
 };
+
+export const achievements = [
+  {
+    month: "Aug",
+    year: "2024",
+    title: "Flipkart Grid",
+    image: "https://www.flipkartcareers.com/images/student/grid/GRiD-main.webp"
+  },
+  {
+    month: "Sep",
+    year: "2024",
+    title: "Walmart Sparkathon",
+    image: "https://www.jobinsider.in/wp-content/uploads/2023/04/Walmart_featured.webp"
+  },
+  {
+    month: "Dec",
+    year: "2024",
+    title: "Smart India Hackathon",
+    image: "https://i.ytimg.com/vi/znMbKz6ZPno/maxresdefault.jpg"
+  },
+  {
+    month: "Jan",
+    year: "2025",
+    title: "IIT Kharagpur Data Science Hackathon",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS8TZLIpm7tafS3qVEmIA3JMAHpPllJgMO2A&s"
+  },
+  {
+    month: "March",
+    year: "2025",
+    title: "Build With India Hackathon",
+    image: "https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/uploadedManual-67aa663639e04_untitled302_20241002232051_1.png?d=200x200"
+  },
+];

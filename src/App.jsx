@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Stats from './components/Stats';
+import Achievements from './components/Achievements';
 // import About from './components/About';
 
 const App = () => {
@@ -41,8 +42,9 @@ const App = () => {
         {/* <About /> */}
         <Education />
         <Projects />
-        <Stats />
+        {/* <Stats /> */}
         <Skills />
+        <Achievements />
         <Contact />
       </main>
       <Footer />

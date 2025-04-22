@@ -5,7 +5,7 @@ import ThemeToggle from '../ThemeToggle';
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = ['Education', 'Projects', 'Stats', 'Skills', 'Contact'];
+  const navItems = ['Education', 'Projects', 'Skills', 'Contact'];
 
   const scrollToTop = () => {
     window.scrollTo({

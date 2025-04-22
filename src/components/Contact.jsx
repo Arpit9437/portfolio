@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-b from-background-light to-gray-50 dark:from-background-dark dark:to-gray-800 transition-colors duration-200"
+      className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-background-dark dark:to-gray-800 transition-colors duration-200"
     >
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-secondary to-primary dark:from-secondary-light dark:to-primary-light bg-clip-text text-transparent">

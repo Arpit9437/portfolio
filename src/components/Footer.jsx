@@ -17,12 +17,12 @@ const Footer = () => {
             >
               Projects
             </a>
-            <a 
+            {/* <a 
               href="#stats" 
               className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors duration-300"
             >
               Stats
-            </a>
+            </a> */}
             <a 
               href="#skills" 
               className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors duration-300"

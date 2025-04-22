@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Github, Linkedin, Mail, Download, Moon, Sun, Terminal, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Moon, Sun, Terminal, ChevronDown, Globe } from 'lucide-react';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
@@ -8,7 +8,7 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const words = ['Computer Science Undergrad', 'Full Stack Engineer', 'Machine Learning Enthusiast'];
+  const words = ['Computer Science Undergrad', 'Full Stack Engineer', 'Machine Learning Enthusiast', 'SIH 2024 Finalist'];
   const deletingSpeed = 50;
   const delayBetweenWords = 2000;
 
@@ -91,16 +91,28 @@ const Hero = () => {
             <span className="animate-pulse ml-1">|</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Building the Future, One Line of Code at a Time.
+          I love building smart, scalable web apps. From frontend to backend, and models to deployment, I enjoy turning ideas into real-world solutions.
           </p>
 
-          <button
-            className="px-6 py-2 bg-primary text-white rounded-full font-medium flex items-center gap-2 hover:bg-primary-dark transition-colors duration-300 mx-auto"
-            onClick={() => window.open('https://drive.google.com/file/d/1IWZHXdYQTcAI6JOlOFto-RtaxU4Qf9gB/view?usp=sharing', '_blank')}
-          >
-            <Download size={20} />
-            Download CV
-          </button>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+            <a
+              href="https://codolio.com/profile/arpitkaple"
+              className="px-6 py-2 bg-secondary dark:bg-secondary-light text-white rounded-full font-medium flex items-center gap-2 hover:bg-secondary-dark dark:hover:bg-secondary-light/90 transition-colors duration-300 mx-auto sm:mx-0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Globe size={20} />
+              Coding Stats
+            </a>
+            
+            <button
+              className="px-6 py-2 bg-primary text-white rounded-full font-medium flex items-center gap-2 hover:bg-primary-dark transition-colors duration-300 mx-auto sm:mx-0"
+              onClick={() => window.open('https://drive.google.com/file/d/1IWZHXdYQTcAI6JOlOFto-RtaxU4Qf9gB/view?usp=sharing', '_blank')}
+            >
+              <Download size={20} />
+              Download Resume
+            </button>
+          </div>
         </div>
       </div>
 

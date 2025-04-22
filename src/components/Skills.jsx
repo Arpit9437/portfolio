@@ -4,7 +4,7 @@ const Skills = () => {
   const [currentCategory, setCurrentCategory] = useState("all");
 
   const skillCategories = {
-    "Programming Languages": [
+    "Languages": [
       "C/C++",
       "Java",
       "Python",
@@ -25,15 +25,10 @@ const Skills = () => {
       "MongoDB",
     ],
     "Machine Learning": [
-      "NumPy",
-      "Pandas",
-      "Matplotlib",
-      "Seaborn",
       "Scikit-learn",
-      "Gradio",
-      "HuggingFace",
+      "HuggingFace Transformers",
       "PyTorch",
-      "LLM's",
+      "Large Language Models",
     ],
     "Coursework": [
       "Object Oriented Programming",
@@ -41,9 +36,10 @@ const Skills = () => {
       "Computer Networks",
       "Database Management System",
       "Artificial Intelligence",
-      "Design Pattern",
+      "Design Patterns",
       "Software Engineering",
-      "Design and Analysis of Algorithms"
+      "Design and Analysis of Algorithms",
+      "Machine Learning"
     ]
   };
 
@@ -56,12 +52,12 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-20 bg-gradient-to-b from-white to-background-light dark:from-gray-900 dark:to-background-dark transition-colors duration-200"
+      className="py-20 bg-gradient-to-b from-gray-50 to-background-light dark:from-background-dark dark:to-gray-900 transition-colors duration-200"
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-center mb-16">
           <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-secondary to-primary dark:from-secondary-light dark:to-primary-light bg-clip-text text-transparent">
-            Skills and Coursework
+            Skills
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto mt-4">
             Following are some of my skills and expertise.
